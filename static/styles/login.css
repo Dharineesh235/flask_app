@@ -1,0 +1,188 @@
+ body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+ }
+ .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading-1{
+    text-align: center;
+}
+.container-out{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 70vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 2%;
+}
+.container-out::before{
+    content: '';
+    height: 200%;
+    width: 200%;
+    position: absolute;
+    background-image: conic-gradient(transparent, transparent, transparent, green);
+    animation: rotate-one 10s linear infinite;
+}
+.container-out::after{
+    content: '';
+    height: 200%;
+    width: 200%;
+    position: absolute;
+    background-image:  conic-gradient(transparent, transparent, transparent, blue);
+    animation: rotate-one 10s linear infinite;
+    animation-delay: -5s;
+}
+.container-in{
+    position: absolute;
+    content: '';
+    z-index: 1;
+    height: 97%;
+    width: 97%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.input-out{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    /* overflow: hidden; */
+}
+.input{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+}
+/* .input::before{
+    content: '';
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    background-image: conic-gradient(transparent, transparent, transparent, blue);
+    animation: rotate-one 10s linear infinite;
+}
+.input::after{
+    content: '';
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    background-image: conic-gradient(transparent, transparent, transparent, green);
+    animation: rotate-one 10s linear infinite;
+    animation-delay: -5s;
+} */
+.input-spot{
+    margin: 2px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-image: linear-gradient(to right,transparent, rgb(207, 245, 207), rgb(202, 202, 250), transparent);
+    /* border-radius: 18px; */
+    outline: none;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.button_dis{
+    margin: 3px;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 2;
+    color: grey;
+    background-color: rgb(216, 252, 252);
+    cursor: pointer;
+}
+.button{
+    margin: 3px;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 2;
+    color: black;
+    background-color: rgb(216, 252, 252);
+    cursor: pointer;
+}
+.submit-out{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    /* overflow: hidden; */
+}
+.submit{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.submit-anim::before{
+    content: '';
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    background-image: conic-gradient(transparent, transparent, transparent, blue);
+    animation: rotate-one 10s linear infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.submit-anim::after{
+    content: '';
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    background-image: conic-gradient(transparent, transparent, transparent, green);
+    animation: rotate-one 10s linear infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: -5s;
+}
+/* .submit:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 15px cyan,
+    0 0 25px cyan,
+    0 0 45px cyan
+    ;
+} */
+.button:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 15px cyan,
+    0 0 25px cyan,
+    0 0 45px cyan
+    ;
+}
+
+@keyframes rotate-one{
+    0%{
+        transform : rotate(0deg);
+    }50%{
+        transform :rotate(180deg);
+    }100%{
+        transform :rotate(360deg);
+    }
+}
+.navbar{
+    background-image: linear-gradient(to bottom, rgb(97, 169, 97), rgb(184, 226, 184), transparent);
+}

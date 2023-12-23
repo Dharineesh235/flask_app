@@ -2,12 +2,24 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-try:
-    @app.route('/')
-    def hello():
-        return render_template("index.html")
-except:
-    print('Error')
+
+@app.route('/login')
+def login():
+    return render_template("login.html")
+
+
+@app.route('/signup')
+def signup():
+    # return render_template("signup.html")
+     return render_template("signup.html")
+    #  return """<div>
+    #             <button> <a href=login>Click sign up!</a></button>
+    #         </div>"""
+
+@app.route('/index')
+def home():
+    return render_template("index.html")
+
 if __name__ == "__main__":
     app.run(debug=True, host='127.0.0.1', port=5000)
 
