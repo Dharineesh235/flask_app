@@ -91,11 +91,23 @@ input{
     border-bottom: 1px solid black;
     background-image: linear-gradient(to right,transparent, rgb(207, 245, 207), rgb(202, 202, 250), transparent);
     /* border-radius: 18px; */
+    outline: none;
     padding: 10px;
     overflow: hidden;
     z-index: 2;
 }
 
+.button_dis{
+    margin: 3px;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 2;
+    color: grey;
+    background-color: rgb(216, 252, 252);
+    cursor: pointer;
+}
 .button{
     margin: 3px;
     border: none;
@@ -103,7 +115,9 @@ input{
     padding: 10px;
     overflow: hidden;
     z-index: 2;
-    background-color: rgb(196, 233, 241);
+    color: black;
+    background-color: rgb(216, 252, 252);
+    cursor: pointer;
 }
 .submit-out{
     display: flex;
@@ -121,21 +135,28 @@ input{
     overflow: hidden;
     border-radius: 50%;
 }
-.submit::before{
+
+.submit-anim::before{
     content: '';
     height: 50%;
     width: 100%;
     position: absolute;
     background-image: conic-gradient(transparent, transparent, transparent, blue);
     animation: rotate-one 10s linear infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
-.submit::after{
+.submit-anim::after{
     content: '';
     height: 50%;
     width: 100%;
     position: absolute;
     background-image: conic-gradient(transparent, transparent, transparent, green);
     animation: rotate-one 10s linear infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
     animation-delay: -5s;
 }
 /* .submit:hover{

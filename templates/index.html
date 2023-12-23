@@ -18,20 +18,20 @@
                 <div class="input-out">
                     <div class="input">
                         <i class="fa fa-user fa-solid"></i>
-                        <input placeholder="Enter your name..."/>
+                        <input oninput="handleName(event)" placeholder="Enter your name..." type="text"/>
                     </div>
                 </div>
 
                 <div class="input-out">
                     <div class="input">
                         <i class="fa fa-lock fa-solid"></i>
-                        <input placeholder="Enter your password..."/>
+                        <input oninput="handlePassword(event)" placeholder="Enter your password..." type="password"/>
                     </div>
                 </div>
 
                 <div class="submit-out">
-                    <div class="submit">
-                        <div class="button">Submit</div>
+                    <div id="Submit-div" class="submit">
+                        <div id="Submit-btn" onclick="button_click()" class="button_dis">Submit</div>
                     </div>
                 </div>
 
@@ -66,5 +66,6 @@
             </div>
         </div>
     </div> -->
+    <script src="{{url_for('static', filename='../static/scripts/index.js')}}"></script>
 </body>
 </html>
